@@ -21,7 +21,7 @@
 
 set -x
 id=$(uuidgen)
-dest=$(mktemp -d --suffix=-lantern)
+dest=$(mktemp -d lantern-XXXXXXXXXX)
 lspci > "$dest/lspci"
 lsmod > "$dest/lsmod"
 uname -a > "$dest/uname"
