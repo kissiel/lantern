@@ -20,7 +20,7 @@
 # Basic backlight data collection script for Lantern
 
 set -x
-id=$(cat /proc/sys/kernel/random/uuid)
+id=$(uuidgen)
 dest=$(mktemp -d --suffix=-lantern)
 lspci > "$dest/lspci"
 lsmod > "$dest/lsmod"
